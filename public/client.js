@@ -1,3 +1,9 @@
+var pet_info = {
+	"name" : "Flop",
+	"weight" : 10,
+	"happiness" : 9001
+}
+
 $(function() {
   
   // Called function to update the name, happiness, and weight of our pet in our HTML
@@ -14,19 +20,25 @@ $(function() {
 
   function clickedTreatButton() {
     // Increase pet happiness
+    pet_info.happiness++;
     // Increase pet weight
+    pet_info.weight++;
     checkAndUpdatePetInfoInHtml();
   }
   
   function clickedPlayButton() {
     // Increase pet happiness
+    pet_info.happiness++;
     // Decrease pet weight
+    pet_info.weight--;
     checkAndUpdatePetInfoInHtml();
   }
   
   function clickedExerciseButton() {
     // Decrease pet happiness
+    pet_info.happiness--;
     // Decrease pet weight
+    pet_info.weight--;
     checkAndUpdatePetInfoInHtml();
   }
 
@@ -37,6 +49,17 @@ $(function() {
   
   function checkWeightAndHappinessBeforeUpdating() {
     // Add conditional so if weight is lower than zero, set it back to zero
+    if( pet_info.weight < 0 ){
+	console.log("STOP STARVING YOUR PET/WORKING IT TO DEATH");
+	pet_info.weight = 0;
+    }
+
+    if( pet_info.happiness < 0 ){
+	console.log("You are a terrible pet owner");
+	pet_info.happiness = 0;
+    }
+
+    
   }
   
   // Updates your HTML with the current values in your pet_info dictionary

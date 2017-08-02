@@ -13,10 +13,47 @@ $(function() {
   $('.treat-button').click(clickedTreatButton);
   $('.play-button').click(clickedPlayButton);
   $('.exercise-button').click(clickedExerciseButton);
+  $('.bunny-select').click(selectedBunny);
+  $('.dog-select').click(selectedDog);
+  $('.cat-select').click(selectedCat);
   
 })
 
   // Add a variable "pet_info" equal to a dictionary with the name (string), weight (number), and happiness (number) of your pet
+
+ function selectedBunny() {
+
+  $('petImage').src = "/assets/bunny.jpg";
+  pet_info = {
+	"name" : "Flop",
+        "weight" : 5,
+        "happiness" : 9001
+  }
+
+ }
+
+ function selectedDog() {
+
+  $('petImage').src = "/assets/dog.jpg";
+  pet_info = {
+	"name" : "Spot",
+        "weight" : 8,
+        "happiness" : 9001
+  }
+
+ }
+
+ function selectedCat() {
+
+  $('petImage').src = "/assets/cat.jpg";
+  pet_info = {
+	"name" : "Fluff",
+        "weight" : 6,
+        "happiness" : 9001
+  }
+
+ }
+
 
   function clickedTreatButton() {
     // Increase pet happiness
@@ -68,4 +105,3 @@ $(function() {
     $('.weight').text(pet_info['weight']);
     $('.happiness').text(pet_info['happiness']);
   }
-

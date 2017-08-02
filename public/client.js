@@ -23,7 +23,7 @@ $(function() {
 
  function selectedBunny() {
 
-  $('petImage').src = "/assets/bunny.jpg";
+  $('.petImage').src = "/assets/bunny.jpg";
   pet_info = {
 	"name" : "Flop",
         "weight" : 5,
@@ -34,7 +34,7 @@ $(function() {
 
  function selectedDog() {
 
-  $('petImage').src = "/assets/dog.jpg";
+  $('.petImage').src = "/assets/dog.jpg";
   pet_info = {
 	"name" : "Spot",
         "weight" : 8,
@@ -45,7 +45,7 @@ $(function() {
 
  function selectedCat() {
 
-  $('petImage').src = "/assets/cat.jpg";
+  $('.petImage').src = "/assets/cat.jpg";
   pet_info = {
 	"name" : "Fluff",
         "weight" : 6,
